@@ -36,6 +36,7 @@ struct ContentView: View {
     @Default(.useMusicVisualizer) var useMusicVisualizer
 
     @Default(.showNotHumanFace) var showNotHumanFace
+    @Default(.showLobster) var showLobster
 
     // Shared interactive spring for movement/resizing to avoid conflicting animations
     private let animationSpring = Animation.interactiveSpring(response: 0.38, dampingFraction: 0.8, blendDuration: 0)
@@ -75,6 +76,11 @@ struct ContentView: View {
             && !vm.hideOnClosed
         {
             chinWidth += (2 * max(0, vm.effectiveClosedNotchHeight - 12) + 20)
+        }
+
+        // Ensure enough width for lobster overlay
+        if showLobster && vm.notchState == .closed {
+            chinWidth = max(chinWidth, vm.closedNotchSize.width + 80)
         }
 
         return chinWidth
@@ -199,6 +205,7 @@ struct ContentView: View {
                         .frame(width: computedChinWidth, height: vm.chinHeight)
                 }
             }
+
         }
         .padding(.bottom, 8)
         .frame(maxWidth: windowSize.width, maxHeight: windowSize.height, alignment: .top)
@@ -294,6 +301,18 @@ struct ContentView: View {
                            BoringHeader()
                                .frame(height: max(24, vm.effectiveClosedNotchHeight))
                                .opacity(gestureProgress != 0 ? 1.0 - min(abs(gestureProgress) * 0.1, 0.3) : 1.0)
+                       } else if vm.notchState == .closed && showLobster && !vm.hideOnClosed {
+                           HStack(spacing: 0) {
+                               Rectangle().fill(.clear)
+                                   .frame(width: 1)
+                               LighthouseMiniView()
+                               Rectangle().fill(.black)
+                                   .frame(width: vm.closedNotchSize.width + 16)
+                               LobsterMiniView()
+                               Rectangle().fill(.clear)
+                                   .frame(width: 1)
+                           }
+                           .frame(height: vm.effectiveClosedNotchHeight, alignment: .center)
                        } else {
                            Rectangle().fill(.clear).frame(width: vm.closedNotchSize.width - 20, height: vm.effectiveClosedNotchHeight)
                        }
@@ -347,6 +366,8 @@ struct ContentView: View {
                         NotchHomeView(albumArtNamespace: albumArtNamespace)
                     case .shelf:
                         ShelfView()
+                    case .lobster:
+                        LobsterHomeView()
                     }
                 }
                 .transition(
@@ -468,8 +489,10 @@ struct ContentView: View {
             .frame(
                 width: max(
                     0,
-                    vm.effectiveClosedNotchHeight - 12
-                        + gestureProgress / 2
+                    showLobster
+                        ? 36
+                        : vm.effectiveClosedNotchHeight - 12
+                            + gestureProgress / 2
                 ),
                 height: max(
                     0,

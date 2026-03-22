@@ -8,6 +8,7 @@
 import AppKit
 import Combine
 import Defaults
+import Foundation
 import SwiftUI
 
 enum SneakContentType {
@@ -50,7 +51,14 @@ struct ExpandedItem {
 class BoringViewCoordinator: ObservableObject {
     static let shared = BoringViewCoordinator()
 
-    @Published var currentView: NotchViews = .home
+    @Published var currentView: NotchViews = {
+        let order = Defaults[.tabOrder]
+        if Defaults[.showLobster] {
+            return order.first ?? .home
+        } else {
+            return order.first(where: { $0 != .lobster }) ?? .home
+        }
+    }()
     @Published var helloAnimationRunning: Bool = false
     private var sneakPeekDispatch: DispatchWorkItem?
     private var expandingViewDispatch: DispatchWorkItem?

@@ -83,6 +83,21 @@ class BoringNotchSkyLightWindow: NSPanel {
                 self?.updateSharingType()
             }
             .store(in: &observers)
+
+        NotificationCenter.default.addObserver(self, selector: #selector(onLobsterActivate), name: Notification.Name("lobsterTabDidActivate"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(onLobsterDeactivate), name: Notification.Name("lobsterTabDidDeactivate"), object: nil)
+    }
+
+    @objc private func onLobsterActivate() {
+        canAcceptKeyInput = true
+        becomesKeyOnlyIfNeeded = false
+        NSApp.activate(ignoringOtherApps: true)
+        makeKeyAndOrderFront(nil)
+    }
+
+    @objc private func onLobsterDeactivate() {
+        canAcceptKeyInput = false
+        becomesKeyOnlyIfNeeded = true
     }
     
     private func updateSharingType() {
@@ -109,6 +124,7 @@ class BoringNotchSkyLightWindow: NSPanel {
     
     private var observers: Set<AnyCancellable> = []
     
-    override var canBecomeKey: Bool { false }
+    var canAcceptKeyInput: Bool = false
+    override var canBecomeKey: Bool { canAcceptKeyInput }
     override var canBecomeMain: Bool { false }
 }

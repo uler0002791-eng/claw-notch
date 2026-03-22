@@ -38,13 +38,21 @@ class BoringNotchWindow: NSPanel {
         isReleasedWhenClosed = false
         level = .mainMenu + 3
         hasShadow = false
+
+        NotificationCenter.default.addObserver(self, selector: #selector(onLobsterActivate), name: Notification.Name("lobsterTabDidActivate"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(onLobsterDeactivate), name: Notification.Name("lobsterTabDidDeactivate"), object: nil)
+    }
+
+    @objc private func onLobsterActivate() {
+        canAcceptKeyInput = true
+        makeKey()
+    }
+
+    @objc private func onLobsterDeactivate() {
+        canAcceptKeyInput = false
     }
     
-    override var canBecomeKey: Bool {
-        false
-    }
-    
-    override var canBecomeMain: Bool {
-        false
-    }
+    var canAcceptKeyInput: Bool = false
+    override var canBecomeKey: Bool { canAcceptKeyInput }
+    override var canBecomeMain: Bool { false }
 }

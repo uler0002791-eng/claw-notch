@@ -57,6 +57,9 @@ struct SettingsView: View {
                 // NavigationLink(value: "Extensions") {
                 //     Label("Extensions", systemImage: "puzzlepiece.extension")
                 // }
+                NavigationLink(value: "OpenClaw") {
+                    Label("OpenClaw", systemImage: "bubble.left.and.text.bubble.right")
+                }
                 NavigationLink(value: "Advanced") {
                     Label("Advanced", systemImage: "gearshape.2")
                 }
@@ -89,6 +92,8 @@ struct SettingsView: View {
                     Shortcuts()
                 case "Extensions":
                     GeneralSettings()
+                case "OpenClaw":
+                    OpenClawSettings()
                 case "Advanced":
                     Advanced()
                 case "About":
@@ -258,6 +263,8 @@ struct GeneralSettings: View {
             } header: {
                 Text("Notch sizing")
             }
+
+            TabOrderSection()
 
             NotchBehaviour()
 

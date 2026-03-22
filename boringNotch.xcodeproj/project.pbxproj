@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		26198C295E35B3BBB3F82C81 /* LobsterStateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7913F4B225E6562D13122391 /* LobsterStateManager.swift */; };
+		B41EE1D34ED0BCF8C73D3006 /* LobsterMiniView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B888D9A7E2ACED088A945F5 /* LobsterMiniView.swift */; };
+		A1F2E3D4B5C6A7890DEADBEF /* LighthouseMiniView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D4E5F6A7B8C9D0E1F2A3B4 /* LighthouseMiniView.swift */; };
+		E7A3B1C2D4F5068798ABCDEF /* LobsterStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8B4C2D3E5A6179809BCDEFA /* LobsterStatusView.swift */; };
+		0A7B91FE0F50D48A4478556C /* LobsterHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C94438B664DA9891169EB63 /* LobsterHomeView.swift */; };
 		1100290C2E847E2800035A57 /* NSItemProvider+LoadHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1100290B2E847E2800035A57 /* NSItemProvider+LoadHelpers.swift */; };
 		110029272E84FD4C00035A57 /* TemporaryFileStorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110029262E84FD4C00035A57 /* TemporaryFileStorageService.swift */; };
 		1100292A2E8691B400035A57 /* FileShareView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 110029292E8691B400035A57 /* FileShareView.swift */; };
@@ -59,6 +64,8 @@
 		11A45C792E34E63100CEB175 /* MediaChecker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11A45C782E34E63100CEB175 /* MediaChecker.swift */; };
 		11C5E3132DFE85970065821E /* SettingsWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C5E3112DFE85970065821E /* SettingsWindowController.swift */; };
 		11C5E3162DFE88510065821E /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11C5E3152DFE88510065821E /* SettingsView.swift */; };
+		AAAA00001111222233334445 /* OpenClawSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAAA00001111222233334444 /* OpenClawSettings.swift */; };
+		AAAA00001111222233334447 /* TabOrderSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = AAAA00001111222233334446 /* TabOrderSettings.swift */; };
 		11CC44A22CEE614100C7244B /* BoringViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11CC44A12CEE614100C7244B /* BoringViewCoordinator.swift */; };
 		11CFC65B2E097E9D00748C80 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11CFC65A2E097E9D00748C80 /* WelcomeView.swift */; };
 		11CFC65F2E097F2F00748C80 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11CFC65E2E097F2100748C80 /* OnboardingView.swift */; };
@@ -181,6 +188,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		7913F4B225E6562D13122391 /* LobsterStateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LobsterStateManager.swift; sourceTree = "<group>"; };
+		9B888D9A7E2ACED088A945F5 /* LobsterMiniView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LobsterMiniView.swift; sourceTree = "<group>"; };
+		C3D4E5F6A7B8C9D0E1F2A3B4 /* LighthouseMiniView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LighthouseMiniView.swift; sourceTree = "<group>"; };
+		F8B4C2D3E5A6179809BCDEFA /* LobsterStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LobsterStatusView.swift; sourceTree = "<group>"; };
+		4C94438B664DA9891169EB63 /* LobsterHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LobsterHomeView.swift; sourceTree = "<group>"; };
 		1100290B2E847E2800035A57 /* NSItemProvider+LoadHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSItemProvider+LoadHelpers.swift"; sourceTree = "<group>"; };
 		110029262E84FD4C00035A57 /* TemporaryFileStorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemporaryFileStorageService.swift; sourceTree = "<group>"; };
 		110029292E8691B400035A57 /* FileShareView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileShareView.swift; sourceTree = "<group>"; };
@@ -227,6 +239,8 @@
 		11A45C782E34E63100CEB175 /* MediaChecker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaChecker.swift; sourceTree = "<group>"; };
 		11C5E3112DFE85970065821E /* SettingsWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsWindowController.swift; sourceTree = "<group>"; };
 		11C5E3152DFE88510065821E /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		AAAA00001111222233334444 /* OpenClawSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenClawSettings.swift; sourceTree = "<group>"; };
+		AAAA00001111222233334446 /* TabOrderSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabOrderSettings.swift; sourceTree = "<group>"; };
 		11CC44A12CEE614100C7244B /* BoringViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoringViewCoordinator.swift; sourceTree = "<group>"; };
 		11CFC65A2E097E9D00748C80 /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		11CFC65E2E097F2100748C80 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
@@ -494,6 +508,7 @@
 				B18654312C6F45AE000B926A /* Live activities */,
 				B18654302C6F4590000B926A /* Settings */,
 				B186542F2C6F455E000B926A /* Notch */,
+				93AEBD4B7721FF23925AE43A /* Lobster */,
 				9A0887332C7AFF7E00C160EA /* Tabs */,
 				B186542E2C6F453B000B926A /* Music */,
 				14D570BF2C5EA5870011E668 /* AnimatedFace.swift */,
@@ -571,6 +586,7 @@
 				14D570BA2C5E98E30011E668 /* enums */,
 				14D570B72C5E98960011E668 /* animations */,
 				147163B52C5D804B0068B555 /* managers */,
+				378B886E144B1B21C2298C36 /* services */,
 				1153BD8E2D986B1F00979FB0 /* MediaControllers */,
 				B15063502C63D3F600EBB0E3 /* extensions */,
 				1471639B2C5D362F0068B555 /* components */,
@@ -719,6 +735,8 @@
 			children = (
 				11F748832ECB27DC00F841DB /* MusicSlotConfigurationView.swift */,
 				11C5E3152DFE88510065821E /* SettingsView.swift */,
+				AAAA00001111222233334444 /* OpenClawSettings.swift */,
+				AAAA00001111222233334446 /* TabOrderSettings.swift */,
 				11C5E3112DFE85970065821E /* SettingsWindowController.swift */,
 				B1D6FD422C6603730015F173 /* SoftwareUpdater.swift */,
 				B1B112902C6A572100093D8F /* EditPanelView.swift */,
@@ -755,6 +773,25 @@
 				B1C4489A2C97376A001F0858 /* TipStore.swift */,
 			);
 			path = Tips;
+			sourceTree = "<group>";
+		};
+		93AEBD4B7721FF23925AE43A /* Lobster */ = {
+			isa = PBXGroup;
+			children = (
+				7913F4B225E6562D13122391 /* LobsterStateManager.swift */,
+				9B888D9A7E2ACED088A945F5 /* LobsterMiniView.swift */,
+				C3D4E5F6A7B8C9D0E1F2A3B4 /* LighthouseMiniView.swift */,
+				F8B4C2D3E5A6179809BCDEFA /* LobsterStatusView.swift */,
+				4C94438B664DA9891169EB63 /* LobsterHomeView.swift */,
+			);
+			path = Lobster;
+			sourceTree = "<group>";
+		};
+		378B886E144B1B21C2298C36 /* services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -898,6 +935,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26198C295E35B3BBB3F82C81 /* LobsterStateManager.swift in Sources */,
+				B41EE1D34ED0BCF8C73D3006 /* LobsterMiniView.swift in Sources */,
+				A1F2E3D4B5C6A7890DEADBEF /* LighthouseMiniView.swift in Sources */,
+				E7A3B1C2D4F5068798ABCDEF /* LobsterStatusView.swift in Sources */,
+				0A7B91FE0F50D48A4478556C /* LobsterHomeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -905,6 +947,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26198C295E35B3BBB3F82C81 /* LobsterStateManager.swift in Sources */,
+				B41EE1D34ED0BCF8C73D3006 /* LobsterMiniView.swift in Sources */,
+				A1F2E3D4B5C6A7890DEADBEF /* LighthouseMiniView.swift in Sources */,
+				E7A3B1C2D4F5068798ABCDEF /* LobsterStatusView.swift in Sources */,
+				0A7B91FE0F50D48A4478556C /* LobsterHomeView.swift in Sources */,
 				115C12EC2ED3D003009754CA /* OpenNotchHUD.swift in Sources */,
 				14C08BB92C8DE4B1000F8AA0 /* BoringCalendar.swift in Sources */,
 				5955950D2E900ED800C66711 /* ApplicationRelauncher.swift in Sources */,
@@ -979,6 +1026,8 @@
 				B10F84A32C6C9596009F3026 /* TestView.swift in Sources */,
 				1443E7F32C609DCE0027C1FC /* matters.swift in Sources */,
 				11C5E3162DFE88510065821E /* SettingsView.swift in Sources */,
+				AAAA00001111222233334445 /* OpenClawSettings.swift in Sources */,
+				AAAA00001111222233334447 /* TabOrderSettings.swift in Sources */,
 				1153BD932D986E4300979FB0 /* AppleMusicController.swift in Sources */,
 				11C5E3132DFE85970065821E /* SettingsWindowController.swift in Sources */,
 				110029272E84FD4C00035A57 /* TemporaryFileStorageService.swift in Sources */,

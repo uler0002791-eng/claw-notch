@@ -192,7 +192,14 @@ class BoringViewModel: NSObject, ObservableObject {
     func open() {
         self.notchSize = openNotchSize
         self.notchState = .open
-        
+
+        // Switch to the first visible tab based on stored order
+        let order = Defaults[.tabOrder]
+        let showLobster = Defaults[.showLobster]
+        if let firstTab = order.first(where: { $0 != .lobster || showLobster }) {
+            coordinator.currentView = firstTab
+        }
+
         // Force music information update when notch is opened
         MusicManager.shared.forceUpdate()
     }

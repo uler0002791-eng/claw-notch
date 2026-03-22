@@ -41,6 +41,7 @@ extension Notification.Name {
     static let mediaControllerChanged = Notification.Name("mediaControllerChanged")
 }
 
+
 // Media controller types for selection in settings
 enum MediaControllerType: String, CaseIterable, Identifiable, Defaults.Serializable {
     case nowPlaying = "Now Playing"
@@ -183,6 +184,12 @@ extension Defaults.Keys {
     // MARK: Media Controller
     static let mediaController = Key<MediaControllerType>("mediaController", default: defaultMediaController)
     
+    // MARK: OpenClaw / Lobster
+    static let showLobster = Key<Bool>("showLobster", default: true)
+
+    // MARK: Tab Order
+    static let tabOrder = Key<[NotchViews]>("tabOrder", default: [.home, .shelf, .lobster])
+
     // MARK: Advanced Settings
     static let useCustomAccentColor = Key<Bool>("useCustomAccentColor", default: false)
     static let customAccentColorData = Key<Data?>("customAccentColorData", default: nil)
