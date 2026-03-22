@@ -4,7 +4,7 @@
 
 > 本项目基于 [boring.notch](https://github.com/TheBoredTeam/boring.notch) 修改开发，感谢 TheBoredTeam 的开源项目。
 
-## Features
+## 功能特性
 
 - **像素风小龙虾** — 收起和展开灵动岛中都有像素画龙虾，3 种状态（离线灰色 / 空闲彩色 / 工作中动画）
 - **WebSocket 实时通信** — 连接 OpenClaw Gateway，实时监听 agent 事件（飞书、Discord 等外部消息自动触发龙虾动画）
@@ -14,26 +14,26 @@
 - **标签页排序** — 可自定义灵动岛标签页顺序，将 OpenClaw 设为默认首页
 - **一键打开 Dashboard** — 灵动岛内按钮直接拉起 OpenClaw Dashboard
 
-## Screenshots
+## 截图
 
-### Lobster States (Closed Notch)
+### 小龙虾三种状态（灵动岛收起时）
 
-The pixel-art lobster has 3 states: **Offline** (gray), **Idle** (colored, still), **Working** (colored, animated claws).
+像素风小龙虾有 3 种状态：**离线**（灰色）、**空闲**（彩色静止）、**工作中**（彩色挥钳动画）。
 
-![Lobster States](screenshots/lobster-states.png)
+![小龙虾状态](screenshots/lobster-states.png)
 
-### Expanded Notch
+### 展开灵动岛
 
-Left: large pixel-art lobster showing activity status. Right: chat bubbles with quick input and Dashboard button.
+左侧：大像素龙虾显示当前活动状态。右侧：聊天气泡 + 快速输入框 + 打开 Dashboard 按钮。
 
-![Expanded Notch](screenshots/expanded-notch.png)
+![展开灵动岛](screenshots/expanded-notch.png)
 
-## Requirements
+## 环境要求
 
 - macOS 14.0+
 - [OpenClaw](https://github.com/nicepkg/openclaw) 本地部署运行
 
-## Acknowledgements
+## 致谢
 
 - [boring.notch](https://github.com/TheBoredTeam/boring.notch) — 本项目基于此开源项目修改开发
 - [OpenClaw](https://github.com/nicepkg/openclaw) — AI 助手引擎
