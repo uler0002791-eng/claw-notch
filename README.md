@@ -16,7 +16,17 @@
 
 ## Screenshots
 
-<!-- TODO: 添加截图 -->
+### Lobster States (Closed Notch)
+
+The pixel-art lobster has 3 states: **Offline** (gray), **Idle** (colored, still), **Working** (colored, animated claws).
+
+![Lobster States](screenshots/lobster-states.png)
+
+### Expanded Notch
+
+Left: large pixel-art lobster showing activity status. Right: chat bubbles with quick input and Dashboard button.
+
+![Expanded Notch](screenshots/expanded-notch.png)
 
 ## Requirements
 
