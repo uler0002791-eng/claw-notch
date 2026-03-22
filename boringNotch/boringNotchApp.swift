@@ -279,6 +279,9 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     func applicationDidFinishLaunching(_ notification: Notification) {
 
+        // Initialize LobsterStateManager early so WebSocket connects regardless of UI state
+        _ = LobsterStateManager.shared
+
         NotificationCenter.default.addObserver(
             self,
             selector: #selector(screenConfigurationDidChange),

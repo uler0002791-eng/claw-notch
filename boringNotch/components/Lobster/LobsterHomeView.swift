@@ -46,7 +46,7 @@ struct LobsterHomeView: View {
 
     private var messageList: some View {
         ScrollViewReader { proxy in
-            ScrollView(.vertical, showsIndicators: false) {
+            ScrollView(.vertical, showsIndicators: true) {
                 LazyVStack(alignment: .leading, spacing: 4) {
                     if lobster.recentMessages.isEmpty && lobster.liveText.isEmpty {
                         emptyState
@@ -63,18 +63,27 @@ struct LobsterHomeView: View {
                         liveBubble
                             .id("live")
                     }
+
+                    // Anchor at bottom for auto-scroll
+                    Color.clear.frame(height: 1).id("bottom")
                 }
                 .padding(.horizontal, 8)
                 .padding(.vertical, 6)
             }
+            .onAppear {
+                // Scroll to bottom on appear
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+                    proxy.scrollTo("bottom", anchor: .bottom)
+                }
+            }
             .onChange(of: lobster.recentMessages.count) { _, _ in
                 withAnimation(.easeOut(duration: 0.2)) {
-                    proxy.scrollTo(lobster.recentMessages.last?.id, anchor: .bottom)
+                    proxy.scrollTo("bottom", anchor: .bottom)
                 }
             }
             .onChange(of: lobster.liveText) { _, _ in
                 withAnimation(.easeOut(duration: 0.15)) {
-                    proxy.scrollTo("live", anchor: .bottom)
+                    proxy.scrollTo("bottom", anchor: .bottom)
                 }
             }
         }
